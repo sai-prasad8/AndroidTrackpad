@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+
+    <EditText
+        android:id="@+id/ipAddressInput"
+        android:layout_width="378dp"
+        android:layout_height="60dp"
+        android:hint="Enter IP Address"
+        android:inputType="text"
+        android:padding="8dp" />
+
+    <!-- Connect Button -->
+    <Button
+        android:id="@+id/connectButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ipAddressInput"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"
+        android:text="Connect" />
+
+    <!-- Status TextView -->
+    <TextView
+        android:id="@+id/statusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ipAddressInput"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_toEndOf="@+id/connectButton"
+        android:text="Status: Not connected"
+        android:textSize="16sp" />
+
+
+
+    <!-- Left Click Button -->
+    <Button
+        android:id="@+id/left_click_button"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/statusTextView"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="Left Click" />
+
+    <!-- Right Click Button -->
+    <Button
+        android:id="@+id/right_click_button"
+        android:layout_width="81dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/left_click_button"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_toRightOf="@id/left_click_button"
+        android:text="Right Click" />
+
+    <!-- Scroll Up Button -->
+
+    <Button
+        android:id="@+id/scroll_up_button"
+        android:layout_width="67dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/statusTextView"
+        android:layout_marginStart="-6dp"
+        android:layout_marginTop="16dp"
+        android:layout_toEndOf="@+id/right_click_button"
+        android:text="Up" />
+
+    <Button
+        android:id="@+id/scroll_down_button"
+        android:layout_width="82dp"
+        android:layout_height="51dp"
+        android:layout_below="@+id/statusTextView"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_toEndOf="@+id/scroll_up_button"
+        android:text="Down" />
+    <!-- Touchpad Area -->
+    <View
+        android:id="@+id/touchpad_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/left_click_button"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:background="#f0f0f0" />
+</RelativeLayout>
